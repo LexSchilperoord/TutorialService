@@ -1,0 +1,53 @@
+﻿@using TutorialService.Controllers
+@model ViewModel
+
+@{
+    ViewData["Title"] = "Create Enrollment";
+}
+
+<h1>Create</h1>
+
+<h4>Enrollment</h4>
+<hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Example ID
+        </dt>
+        <dt class = "col-sm-2">
+            @Model.Id
+        </dt>
+    </dl>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddEnrollment">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="@Model.Enrollment.GroupID" class="control-label">Group ID</label>
+                <input asp-for="@Model.Enrollment.GroupID" class="form-control" />
+                <span asp-validation-for="@Model.Enrollment.GroupID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Enrollment.ExampleID" class="control-label">Example ID</label>
+                <input asp-for="@Model.Enrollment.ExampleID" class="form-control" value="@Model.Id"/>
+                <span asp-validation-for="@Model.Enrollment.ExampleID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Enrollment.Grade" class="control-label">Grade</label>
+                <input asp-for="@Model.Enrollment.Grade" class="form-control"/>
+                <span asp-validation-for="@Model.Enrollment.Grade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="AddEnrollment" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
