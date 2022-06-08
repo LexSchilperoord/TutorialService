@@ -4,8 +4,7 @@ namespace TutorialService.Controllers
 {
     public class ViewModel
     {
-        private int id;
-        public int Id { get { return 1; } set { id = value; } }
+        public int Id { get; set; }
         public Example? Example { get; set; }
         public Enrollment? Enrollment { get; set; }
     }
