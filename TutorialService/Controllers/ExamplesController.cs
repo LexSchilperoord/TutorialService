@@ -96,7 +96,7 @@ namespace TutorialService.Controllers
             return View(example);
         }
 
-        // GET: Examples/AddEnrollment
+        // GET: Examples/AddEnrollment/5
         public async Task<IActionResult> AddEnrollment(int id)
         {
             if (_context.Example == null || _context.Enrollment == null)
@@ -119,7 +119,7 @@ namespace TutorialService.Controllers
             return View(mymodel);
         }
 
-        // POST: Examples/AddEnrollment
+        // POST: Examples/AddEnrollment/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
