@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TutorialService", "TutorialService\TutorialService.csproj", "{D3FCDDF2-5075-47EA-935C-3F642D0267DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TutorialService", "TutorialService\TutorialService.csproj", "{D3FCDDF2-5075-47EA-935C-3F642D0267DF}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{535C8480-9ED4-4751-9751-23DC8F6B347E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBMigrator", "..\DBMigrator\DBMigrator.csproj", "{45399879-79F4-4151-8743-20096E8C374A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{D3FCDDF2-5075-47EA-935C-3F642D0267DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3FCDDF2-5075-47EA-935C-3F642D0267DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3FCDDF2-5075-47EA-935C-3F642D0267DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{535C8480-9ED4-4751-9751-23DC8F6B347E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{535C8480-9ED4-4751-9751-23DC8F6B347E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{535C8480-9ED4-4751-9751-23DC8F6B347E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{535C8480-9ED4-4751-9751-23DC8F6B347E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45399879-79F4-4151-8743-20096E8C374A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45399879-79F4-4151-8743-20096E8C374A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45399879-79F4-4151-8743-20096E8C374A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45399879-79F4-4151-8743-20096E8C374A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  tutorialservice:
+    image: ${DOCKER_REGISTRY-}lexschilperoord/tutorialservice:latest
+    container_name: TutorialServiceDockerCompose
+    build:
+      context: .
+      dockerfile: TutorialService/Dockerfile
+    ports:
+      - "49501:80"
+    depends_on:
+      - db
+  db:
+    image: ${DOCKER_REGISTRY-}lexschilperoord/tutorialservice:db
+    container_name: TutorialServiceDockerComposeDB
+    environment:
+            MSSQL_DATABASE: "TutorialService"
+            SA_PASSWORD: "yourStrong(!)Password"
+            ACCEPT_EULA: "Y"
+    ports:
+      - "49301:4000"

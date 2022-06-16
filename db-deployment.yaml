@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: db
+  name: db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: db
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: db
+    spec:
+      containers:
+        - env:
+            - name: ACCEPT_EULA
+              value: "Y"
+            - name: MSSQL_DATABASE
+              value: TutorialService
+            - name: SA_PASSWORD
+              value: yourStrong(!)Password
+          image: lexschilperoord/tutorialservice:db
+          name: tutorialservicedockercomposedb
+          ports:
+            - containerPort: 4000
+          resources: {}
+      restartPolicy: Always
+status: {}
